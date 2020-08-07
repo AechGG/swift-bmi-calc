@@ -31,16 +31,10 @@ struct CalcBrain {
     }
     
     func getAdvice() -> String{
-        if let bmiOptional = bmi {
-            return bmiOptional.advice;
-        }
-        return "No advice";
+        return bmi?.advice ?? "No advice";
     }
     
     func getColor() -> UIColor {
-        if let bmiOptional = bmi {
-            return bmiOptional.color;
-        }
-        return .orange;
+        return bmi?.color ?? .orange;
     }
 }
