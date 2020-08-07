@@ -16,6 +16,8 @@ class CalculateViewController: UIViewController {
     @IBOutlet weak var heightSlider: UISlider!
     @IBOutlet weak var weightSlider: UISlider!
     
+    var bmiValue: Float = 0.0;
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -34,11 +36,21 @@ class CalculateViewController: UIViewController {
     @IBAction func calculateButton(_ sender: UIButton) {
         let height = heightSlider.value;
         let weight = weightSlider.value;
-        let bmi = weight / pow(height, 2);
+        bmiValue = weight / pow(height, 2);
         
-//        let secondVC = SecondViewController();
-//        secondVC.bmiValue = String(format: "%.1f", bmi)
-//        self.present(secondVC, animated: true, completion: nil);
+        self.performSegue(withIdentifier: "goToResult", sender: self);
+    }
+    
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+        if segue.identifier == "goToResult" {
+            let destinationVC = segue.destination as! ResultsViewController;
+            destinationVC.bmiValue = String(format: "%.1f", bmiValue);
+        }
     }
 }
 
