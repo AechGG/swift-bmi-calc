@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8277800B24DD6CE0009F1AB6 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8277800A24DD6CE0009F1AB6 /* ResultsViewController.swift */; };
+		8277800E24DD7380009F1AB6 /* CalcBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8277800D24DD7380009F1AB6 /* CalcBrain.swift */; };
 		82AFE20C24DC311800D31E00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AFE20B24DC311800D31E00 /* AppDelegate.swift */; };
 		82AFE20E24DC311800D31E00 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AFE20D24DC311800D31E00 /* SceneDelegate.swift */; };
 		82AFE21024DC311800D31E00 /* CalculateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AFE20F24DC311800D31E00 /* CalculateViewController.swift */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		8277800A24DD6CE0009F1AB6 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		8277800D24DD7380009F1AB6 /* CalcBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcBrain.swift; sourceTree = "<group>"; };
 		82AFE20824DC311800D31E00 /* BMICalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BMICalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82AFE20B24DC311800D31E00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82AFE20D24DC311800D31E00 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +41,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8277800C24DD736B009F1AB6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8277800D24DD7380009F1AB6 /* CalcBrain.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		82AFE1FF24DC311800D31E00 = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +70,7 @@
 			children = (
 				82AFE20B24DC311800D31E00 /* AppDelegate.swift */,
 				82AFE20D24DC311800D31E00 /* SceneDelegate.swift */,
+				8277800C24DD736B009F1AB6 /* Model */,
 				82AFE22124DC31ED00D31E00 /* View */,
 				82AFE22324DC320200D31E00 /* Controller */,
 				82AFE21424DC311A00D31E00 /* Assets.xcassets */,
@@ -157,6 +168,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8277800E24DD7380009F1AB6 /* CalcBrain.swift in Sources */,
 				82AFE21024DC311800D31E00 /* CalculateViewController.swift in Sources */,
 				82AFE20C24DC311800D31E00 /* AppDelegate.swift in Sources */,
 				82AFE20E24DC311800D31E00 /* SceneDelegate.swift in Sources */,

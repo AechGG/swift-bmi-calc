@@ -16,7 +16,7 @@ class CalculateViewController: UIViewController {
     @IBOutlet weak var heightSlider: UISlider!
     @IBOutlet weak var weightSlider: UISlider!
     
-    var bmiValue: Float = 0.0;
+    var calcBrain: CalcBrain = CalcBrain();
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +36,8 @@ class CalculateViewController: UIViewController {
     @IBAction func calculateButton(_ sender: UIButton) {
         let height = heightSlider.value;
         let weight = weightSlider.value;
-        bmiValue = weight / pow(height, 2);
+        
+        calcBrain.calculateBMI(height, weight);
         
         self.performSegue(withIdentifier: "goToResult", sender: self);
     }
@@ -49,7 +50,7 @@ class CalculateViewController: UIViewController {
         // Pass the selected object to the new view controller.
         if segue.identifier == "goToResult" {
             let destinationVC = segue.destination as! ResultsViewController;
-            destinationVC.bmiValue = String(format: "%.1f", bmiValue);
+            destinationVC.bmiValue = calcBrain.getBMIValue();
         }
     }
 }
